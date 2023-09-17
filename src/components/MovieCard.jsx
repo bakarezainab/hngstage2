@@ -1,7 +1,7 @@
 import React from "react"
 const MovieCard = ({ movie }) => {
   if (!movie) {
-    // Handle the case where 'movie' is undefined or null
+    // Handle where 'movie' is undefined or null
     return (
       <div className="w-[18rem] max-w-[100%] text-xl flex flex-col rounded-xl p-2 text-slate-600 m-5 cursor-pointer hover:scale-110 hover:mt-10 hover:mb-8 font-serif">
         <p>No movie data available.</p>

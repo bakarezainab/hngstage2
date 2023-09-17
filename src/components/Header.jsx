@@ -10,9 +10,9 @@ const Header = () => {
       <img
         className="w-fit md:w-fit lg:w-fit"
         src={Poster}
-        alt="Loading"
-        height="80px"
-        width="80px"
+        alt="Please Wait"
+        height="2160"
+        width="3840"
       />
       <div className="absolute  flex items-center top-5 align-center left-96">
         <input
