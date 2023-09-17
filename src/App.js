@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import MovieCarousel from "./components/MovieCarousel"; // Import MovieCarousel component
+import Home from "./Pages/Homes.jsx";
+import MovieDetailsPage from "./Pages/MovieDetailsPage.jsx";
+import MoviePage from "./Pages/MoviePage.jsx";
+import Sidebar from "./components/Sidebar.jsx";
+import Footer from "./components/Footer.jsx";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <MovieCarousel category="trending" /> {/* MovieCarousel before Home */ }
+      {/* Uncomment if you want to add more carousels */ }
+      <MovieCarousel category="horror" />
+      <MovieCarousel category="comedy" />
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/movie/:id" element={ <MoviePage /> } />
+        <Route
+          path="/movie-details/:id"
+          element={
+            <>
+              <Sidebar /> {/* Include Sidebar */ }
+              <MovieDetailsPage />
+            </>
+          }
+        />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
-
 export default App;
