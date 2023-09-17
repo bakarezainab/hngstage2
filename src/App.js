@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "./components/Header.jsx";
 import MovieCarousel from "./components/MovieCarousel"; // Import MovieCarousel component
 import Home from "./Pages/Homes.jsx";
 import MovieDetailsPage from "./Pages/MovieDetailsPage.jsx";
@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <MovieCarousel category="trending" /> {/* MovieCarousel before Home */ }
+      <MovieCarousel category="trending" /> {/* Let MovieCarousel appear before Homes */ }
       {/* Uncomment if you want to add more carousels */ }
       <MovieCarousel category="horror" />
       <MovieCarousel category="comedy" />
