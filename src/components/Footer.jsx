@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa" // Import icons from react-icons
+import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa" 
+// Import icons from react-icons
 const Footer = () => {
   return (
     <footer className="bg-gray-500 text-white py-4 font-serif">
       <div className="container mx-auto text-center">
         <p data-testid="footer-copyright" className="text-lg mb-4">
-          &copy; 2023 BEM'S STUDIO
+          &copy; ZEE MOVIES
         </p>
         <div className="flex flex-wrap justify-center lg:justify-center">
           {" "}

@@ -10,7 +10,7 @@ const MoviePage = () => {
   }
   // Replace this with the actual movie data from your API or props
   const yourMovieDetailsData = {
-    id: 1, // Movie ID
+    id: 3, // Movie ID
     title: "Movie Title",
     overview: "Movie Overview",
     release_date: "2023-09-15",

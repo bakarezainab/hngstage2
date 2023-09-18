@@ -34,9 +34,13 @@ function Home() {
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col items-center h-full mt-10">
       <div className="flex flex-wrap justify-evenly">
-        {movies.map((movie) => (
+
+            {movies.map((movie) => (
           <MovieCard movie={movie} key={movie.id} />
         ))}
+        {/* {movies.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))} */}
       </div>
       <div className="w-[250px] mt-5 pb-10 font-serif font-bold">
         <button
